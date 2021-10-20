@@ -1,0 +1,5 @@
+¿Dónde almacenan las gemas que se instalan con el comando gem? ¿Y aquellas instaladas con
+el comando bundle?
+
+En mi caso las gemas se almacenan en:
+C:\Ruby27-x64\lib\ruby\gems\2.7.0\gems

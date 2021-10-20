@@ -1,0 +1,7 @@
+¿Qué es una gema? ¿Para qué sirve? ¿Qué estructura general suele tener?
+
+Una gema es un formato simple para publicar y compartir código Ruby. Son librerias
+básicamente. Su estructura general consiste en:
+-Nombre de la gema 
+-Versión
+-Plataforma

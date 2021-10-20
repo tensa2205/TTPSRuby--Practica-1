@@ -1,0 +1,20 @@
+¿Para qué sirve retry? ¿Cómo podés evitar caer en un loop infinito al usarla?
+
+Retry es una instrucción que sirve para volver a ejecutar 
+el bloque de código del Begin que originalmente lanzó la excepción.
+
+Para evitar el loop infinito del retry, lo recomendable
+es proveer un mecanismo para limitar la cantidad
+de retry. Por ejemplo:
+begin
+  retries ||= 0
+  puts "try ##{ retries }"
+  raise "the roof"
+rescue
+  retry if (retries += 1) < 3
+end
+
+# ... outputs the following:
+# try #0
+# try #1
+# try #2

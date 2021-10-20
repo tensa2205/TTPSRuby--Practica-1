@@ -1,0 +1,41 @@
+Utilizando el proyecto creado en el punto anterior como referencia, contestá las siguientes pre‑
+guntas:
+1. ¿Qué finalidad tiene el archivo Gemfile?
+    Archivo que permite especificar que gemas se van a usar y opcionalmente sus versiones.
+
+2. ¿Para qué sirve la directiva source del Gemfile? ¿Cuántas veces puede estar en un mismo
+archivo?
+    Source especifica de donde bajamos las gemas.
+    Las veces que queramos, podemos decir que X gema se instalará usando un source específico:
+    Ej: gem 'my_gem', :source => 'https://gems.example.com'
+    También que usando un source específico instalaremos varias gemas:
+    source 'https://gems.example.com' do
+        gem 'another_gem', '1.2.1'
+        gem 'beautiful_gem', '1.0.0'
+    end
+
+3. Acorde a cómo agregaste la gema colorputs, ¿qué versión se instaló de la misma? Si
+mañana se publicara la versión 7.3.2, ¿esta se instalaría en tu proyecto? ¿Por qué? ¿Cómo
+podrías limitar esto y hacer que sólo se instalen releases de la gema en las que no cambie
+la versión mayor de la misma con respecto a la que tenés instalada ahora?
+    -Se instaló la versión 0.2.3 de colorputs.
+    -No se instalaría automaticamente. Deberia usar el comando bundle update
+    -Para instalar solo releases que no superen el Major: gem "colorputs" , '~>0.2.3'
+
+
+4. ¿Qué ocurrió la primera vez que ejecutaste prueba.rb? ¿Por qué?
+    Ocurrió un LoadError ya que no encontró el archivo de la gema.
+5. ¿Qué cambió al ejecutar bundle install?
+    Se instaló la gema colorputs que especifiqué en el Gemfile.
+
+6. ¿Qué diferencia hay entre bundle install y bundle update?
+    Bundle install instala dependencias, Bundle update las actualiza a sus ultimas versiones.
+
+7. ¿Qué ocurrió al ejecutar prueba_dos.rb de las distintas formas enunciadas? ¿Por qué?
+¿Cómo modificarías el archivo prueba_dos.rb para que funcione correctamente sin im‑
+portar de cuál de las dos maneras indicadas es ejecutado?
+
+    -Bundle exec me ejecutó el script en el contexto del bundle actual, lo cual no generó errores.
+    -Si lo ejecutás usando ruby nombreArchivo te tira NameError de que 
+    la constante Bundler no está inicializada.
+    -Agregando la línea require 'bundler' hace que funcione para ambas formas de ejecutar.

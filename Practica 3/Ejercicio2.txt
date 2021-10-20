@@ -1,0 +1,7 @@
+¿Cuál es la diferencia entre raise y throw? ¿Para qué usarías una u otra opción?
+
+Raise es para lanzar errores, forma parte de las instrucciones que sirven para
+tratar con errores, llamados excepciones.
+Throw por el otro lado es más para flujo de control. No se usa para excepciones
+sino para proveer una forma de terminar la ejecución tempranamente cuando
+no se requiere más trabajo.

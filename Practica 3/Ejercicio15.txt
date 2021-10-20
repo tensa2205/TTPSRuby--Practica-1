@@ -1,0 +1,33 @@
+Investigá un poco sobre Semantic Versioning (o SemVer). 
+¿Qué finalidad tiene? ¿Cómo se compone una versión? 
+¿Ante qué situaciones debería cambiarse cada una de sus partes?
+
+La finalidad del versionado semántico consiste en asignar números de versión
+únicos a diferentes estados únicos de una aplicación.
+Esos valores se asignan en un orden incremental ya que corresponden
+a nuevos desarrollos que hacen referencia dicha aplicación.
+También sirve para mantener un tracking de las diferentes versiones que
+van saliendo.
+
+Una versión se compone de 3 valores numéricos separados por un punto:
+Valor1.Valor2.Valor3
+--------------------
+MAJOR.Minor.patch
+
+Donde cada valor referencia qué se hizo sobre la aplicación a grandes ragos:
+-Patch (valor3) es el valor que se va incrementando conforme se hacen 
+cambios menores y se arreglan bugs en el código de forma que no se cambia 
+la API.
+-Minor (valor2) es el valor que se va incrementando conforme se agregan
+nuevas funcionalidades a la API que no rompen compatibilidad con versiones 
+anteriores.
+-Major (valor3) es el valor que se va incrementando conforme se agregan 
+nuevas funcionalidades a la API que rompen la compatibilidad con versiones 
+anteriores.
+
+Por ejemplo: si un software usa la versión 2.1.5 de una API es compatible 
+con la versión 2.2.3 pero no necesariamente con la 3.2.4.
+
+
+
+

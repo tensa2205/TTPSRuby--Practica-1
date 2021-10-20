@@ -1,0 +1,13 @@
+¿Para qué sirve redo? ¿Qué diferencias principales tiene con retry?
+Redo sirve para volver a ejecutar la iteración 
+de un loop.
+
+Ejemplo:
+10.times do |i|
+  puts "Iteration #{i}"
+  redo if i > 2
+end
+
+La diferencia principal es esa, retry se usa 
+para bloques begin. Redo se usa para bloques 
+de loops.

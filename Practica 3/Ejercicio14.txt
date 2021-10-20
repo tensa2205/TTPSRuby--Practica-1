@@ -1,0 +1,5 @@
+¿Para qué sirve el comando gem server? ¿Qué información podés obtener al usarlo?
+https://guides.rubygems.org/command-reference/#gem-server
+El comando gem server arranca un servidor web que hostea el RDoc
+para nuestras gemas instaladas de forma que dicho server puede
+operar como un server para instalar gemas en otras máquinas.

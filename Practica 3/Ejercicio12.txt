@@ -1,0 +1,10 @@
+¿Cuáles son las principales diferencias entre el comando gem y Bundler? ¿Hacen lo mismo?
+
+El comando gem se usa para cosas relacionadas a las gemas como:
+-Instalar una gema.
+-Buscar una gema.
+-Listar las gemas que instalamos.
+El comando bundler es específicamente una gema que nos permite mantener
+entornos consistentes para nuestras aplicaciones ruby de forma que nos asegura
+que la app que use bundler tenga las dependencias necesarias para una ejecución
+sin errores.

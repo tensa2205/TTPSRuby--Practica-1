@@ -1,0 +1,36 @@
+¿Para qué sirven begin .. rescue .. else y ensure? Pensá al menos 2 casos concretos
+en que usarías estas sentencias en un script Ruby.
+
+begin contendrá el bloque de código que puede lanzar excepciones cuando se ejecuta.
+rescue contendrá el bloque de código que se usará para tratar la excepción,
+sea específica o standard. También podemos tener múltiples rescue para varias
+excepciones diferentes.
+else contendrá el bloque de código que se ejecutará cuando no se lancen excepciones.
+ensure contendrá el bloque de código que se ejecutará independientemente
+de si se haya levantado o no cualquier excepción.
+
+Ejemplo 1:
+
+f = File.open("testfile")
+begin
+  # .. process
+rescue
+  # .. handle error
+else
+  puts "Congratulations-- no errors!"
+ensure
+  f.close
+end
+
+Ejemplo 2:
+numerador = gets.chomp.to_i
+denominador = gets.chomp.to_i
+begin
+    res = numerador / denominador
+rescue ZeroDivisionError
+    puts "No podés dividir por cero"
+else
+    puts "Sin problemas
+ensure
+    puts "Ingresaste los siguientes valores: %d   %d" % [numerador,denominador]
+

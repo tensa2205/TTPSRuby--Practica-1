@@ -1,0 +1,44 @@
+Investigá la jerarquía de clases que presenta Ruby para las excepciones. 
+¿Para qué se utilizan las siguientes clases?
+
+Jerarquía:
+• ArgumentError: excepción que se levanta cuando se llama a un método con los argumentos incorrectos.
+
+• IOError: excepción que se levanta cuando una operación de E/S falla.
+
+• NameError: excepción que se levanta cuando se referencia una constante o variable que no está
+definida en el contexto en el cuál se está queriendo referenciar.
+
+• NotImplementedError: excepción que se levanta cuando una funcionalidad no está 
+implementada en la plataforma donde se está corriendo el programa Ruby. Estas funcionalidades
+son más de low code que tienen que ver con las cosas que puede hacer el S.O.
+
+• RuntimeError: es la clase de excepción genérica cuando se intenta hacer una operación
+inválida.
+
+• StandardError: la mayor parte de clases de excepciones son subclases de esta 
+clase StandardError. Un bloque rescue sin una clase de excepción explícitamente indicada
+rescatará todos los errores Standard.
+
+• StopIteration: excepción que se levanta para detener una iteración. Se ve normalmente
+cuando se usa el mensaje #next de Enumerator. Es decir, si yo recorro un enumerator 
+usando un loop. Puedo hacer el rescate explícito, pero también se hace de por si implicitamente.
+https://stackoverflow.com/questions/57963765/is-there-a-built-in-way-to-check-if-next-or-peek-will-raise-stopiteration
+
+• SystemExit: excepción que se levanta automáticamente por la sentencia exit de forma
+que se produce la terminación del script.
+
+• SystemStackError: excepción que se produce ante un stack overflow. Como pueden
+ser loops infinitos o llamados infinitos.
+
+• TypeError: excepción que se produce cuando se encuentra un objeto donde el mismo
+no tiene un tipo esperado de dato.
+        def print_random(number)
+            number.times do
+                puts "a"
+            end
+        end
+Si yo le enviase un string a print_random, me lanzaria esa excepción ya que 
+string no posee el método times ya que es propio de los integer.
+
+• ZeroDivisionError: excepción que se produce cuando se intenta dividir por 0.
