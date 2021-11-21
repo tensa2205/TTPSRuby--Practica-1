@@ -1,0 +1,27 @@
+El framework está compuesto de diferentes librerías:
+• ActionMailer
+• ActionPack
+• ActionView
+• ActiveJob
+• ActiveModel
+• ActiveRecord
+• ActiveSupport
+• ActionCable
+• ActiveStorage
+• ActionText
+• ActionMailbox
+Para cada una de estas librerías, analizá y respondé las siguientes preguntas:
+1. ¿Qué funcion principal cumple?
+ -ActionMailer: permite enviar correos electrónicos desde la aplicación rails usando clases y views de correo. Estos mailers tienen
+ un funcionamiento similar a los controladores. Heredan de ActionMailer::Base.
+ -ActionPack: las capas de Controlador y Vistas son manejadas juntas por ActionPack, básicamente action pack se compone de ActionController y ActionView.
+ -ActionView: nos sirve para manejar vistas.
+ -ActiveJob: permite programar tareas (jobs) asíncronos que podemos programar para que ocurran en determinado momento, todo en segundo plano.
+ -ActiveModel: usado para extraer comportamiento fuera del modelo de ActiveRecord en concerns separados. Esto permite usar este comportamiento en cualquier objeto, no únicamente en modelos ActiveRecord.
+ -ActiveRecord: es un ORM. https://blog.nearsoftjobs.com/que-es-active-record-y-como-funciona-cbfc7910541f
+ -ActiveSupport: permite de proporcionar extensiones del lenguaje, utilidades.
+ -ActionCable: integra websockets con rails.
+ -ActiveStorage: simplifica upload y gestión de archivos en cloud providers. Se usa para la nube principalmente.
+ -ActionText: manejo de texto enriquecido en rails.
+ -ActionMailbox: ruteo de mail que entran a nuestra app a través de un controlador para procesarlo en rails.
+2. Citá algún ejemplo donde se te ocurra que podrías utilizarla.
