@@ -1,0 +1,9 @@
+-¿De qué manera se le puede enseñar a AS cómo pasar de singular a plural (o viceversa) los sus‑
+tantivos que usamos en nuestro código?
+Tip: Mirá el archivo config/initializers/inflections.rb
+
+-Modificá la configuración de la aplicación Rails para que aprenda a pluralizar correctamente en
+español todas las palabras que terminen en l, n y r.
+Tip: el uso de expresiones regulares simples ayuda.
+
+Lo busqué en google pero bue

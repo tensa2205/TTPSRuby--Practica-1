@@ -1,0 +1,13 @@
+Sobre routing:
+1. ¿Dónde se definen las rutas de la app Rails?
+    En config/routes.rb
+2. ¿De qué formas se pueden definir las rutas? Investigá la DSL para definición de rutas que
+Ruby on Rails provee.
+    https://guides.rubyonrails.org/routing.html
+3. ¿Qué ruta(s) agregó el generator que usaste en el último inciso del punto anterior?
+    get 'polite/salute'
+4. ¿Con qué comando podés consultar todas las rutas definidas en tu aplicación Rails?
+    bin/rails routes 
+5. Modificá el mapeo de rutas de tu aplicación para que al acceder a / (root) se acceda al
+controlador definido antes (polite#salute)
+    root to: 'polite#salute'

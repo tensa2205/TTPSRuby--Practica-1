@@ -1,0 +1,2 @@
+¿De qué forma sabe ActiveRecord qué campos tiene un modelo?
+Mediante instrospección

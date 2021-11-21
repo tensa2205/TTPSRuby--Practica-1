@@ -1,0 +1,4 @@
+¿Qué metodos (getters y setters) genera AR para los campos escalares básicos (integer,
+string, text, boolean, float)?
+
+Genera accessors directamente.

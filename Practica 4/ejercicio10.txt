@@ -1,0 +1,56 @@
+https://guides.rubyonrails.org/active_support_core_extensions.html
+Investigá qué métodos agrega AS a las siguientes clases:
+1. String --> require "active_support/core_ext/string"
+    html_safe --> para chequear que un html en string sea seguro (sin XSS).
+    remove(pattern) --> remueve todas las ocurrencias de un patrón en un string.
+    squish --> quita espacios en blanco iniciales y finales y reemplaza muchos espacios en el medio por un solo espacio.
+    truncate(length) --> trunca un string dado un tamaño
+    truncate_bytes(bytes) -->trunca en base a bytes 
+    truncate_words(words_quantity) --> trunca en cantidad de palabras
+    inquiry --> convierte un string en un StringInquirer.
+    starts_with? y ends_with? -->ambos reciben como parámetro una letra.
+    indent(nroIndentaciones) --> indenta en base a una cantidad  
+    at(posicion) --> accede al caracter de la posición
+    from(posicionDesde) --> retorna un substring arrancando en posicionDesde
+    to(posicionHasta)
+    first(nCaracteres)
+    last(nUltimosCaracteres)
+    pluralize --> retorna el plural de un string 
+    singularize --> retorna el singular de un string
+    camelize --> devuelve el string en camelcase (tomar en cuenta: reemplaza los / por ::)
+    underscore --> convierte a underscore (devuelve :: a /)
+    titleize --> tituliza un string (alicia en el pais de las maravillas - Alicia En El Pais De Las Maravillas)
+    dasherize --> reemplaza underscores por dashes -
+    demodulize --> retorna la parte derecha de un texto con separación
+    deconstantize --> lo mismo que el anterior pero devuelve la parte izquierda
+    parameterize --> convierte un string en un formato más lindo para urls 
+    tableize --> hace un underscore + pluralize 
+    classify --> inverso de tableize, nos da el nombre de clase correspondiente a un table name.
+    constantize --> nose
+    humanize --> convierte un nombre de atributo para ser correctamente mostrado a usuarios finales
+    foreign_key --> nos otorga el nombre de una foreign key column de un class name.
+    to_date
+    to_time
+    to_datetime --> usados para convertir a lo correspondiente
+
+2. Array require "active_support/core_ext/array"
+    to(numero) --> devuelve subarray hasta el numero especificado
+    from(numero) --> devuelve subarray desde el numero especificado
+    including(valores) --> devuelve el array incluyendo los valores
+    excluding(valores) --> excluye del arreglo los elementos especificados
+    extract!{bloque} --> remueve y retorna los elementos para los cuales el bloque devuelve verdadero.
+    to_sentence --> convierte array a string
+    to_formatted_s --> se usa más para devolver ID's
+    to_xml --> contiene un string que representa el XML del que usó el método
+3. Hash
+    to_xml --> convierte el hash a xml string
+    merge(otro hash) --> mergea el hash llamador con otro hash 
+4. Date
+5. Numeric
+    Extiende los numeros de forma que permite aplicar a un número lo sgte:
+        bytes - kilobytes - megabytes - gigabytes - terabytes - petabytes - exabytes
+        2.kilobytes => 2048
+
+
+Son demasiadas, no voy a abarcar todas
+    

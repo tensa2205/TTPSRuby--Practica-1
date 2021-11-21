@@ -1,0 +1,15 @@
+Sobre los generators:
+1. ¿Qué son? ¿Qué beneficios imaginás que trae su uso?
+        Permiten generar el esqueleto de lo que deseemos, también podemos crear generators personalizados.
+        por ej, un generator que cree un archivo.
+2. ¿Con qué comando podés consultar todos los generators disponibles en tu app Rails?
+        bin/rails generate
+3. Utilizando el generator adecuado, creá un controlador llamado PoliteController que
+tenga una acción salute que responda con un saludo aleatorio de entre un arreglo de 5
+diferentes, como por ejemplo “Good day sir/ma’am.”.
+        Para generarlo:
+            bin/rails generate controller Polite salute
+
+            Genera controlador con un método salute, agrega la ruta a ese método en routes.rb, crea la carpeta de vistas
+            para el controlador y agrega dentro de ella salute.html.erb (vista), también crea un polite_controller_test
+            y un polite_helper.

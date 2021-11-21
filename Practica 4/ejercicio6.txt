@@ -1,0 +1,15 @@
+Sobre los initializers:
+    1. ¿Qué son y para qué se utilizan?
+
+        Para ejecutar código antes de que la app Rails se cargue.
+    2. ¿En qué momento de la vida de la aplicación se ejecutan?
+        Antes de que la app rails se cargue xd.
+    3. Si tu app está corriendo y modificás algún initializer, ¿los cambios se reflejan automática‑
+    mente? ¿Por qué?
+        No se reflejan automáticamente ya que todo cambio sobre la configuración de la app necesita un reload del server.
+    4. Creá un initializer en tu aplicación que imprima en pantalla el string "Booting
+    practica_rails :)". ¿En qué momento se visualiza este mensaje?
+        Lo ubiqué en config/initializers/practica_initializer.rb
+
+            Se visualiza antes de que arranque el server.
+    

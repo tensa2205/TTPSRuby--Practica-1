@@ -1,0 +1,16 @@
+¿Cómo se define un modelo con ActiveRecord? ¿Qué requisitos tienen que cumplir las clases
+para utilizar la lógica de abstracción del acceso a la base de datos que esta librería ofrece?
+class Books < ApplicationRecord
+end
+Después se hace rails db:migrate para correr la migración
+Listo, ya tenemos la tabla, ez
+
+Requisitos de convenciones:
+-Los model/class van en singular y en camelcase.
+-Se mapean directo con un plural en snakecase
+    Article --> articles
+    LineItem --> line_items
+-Las claves foraneas son:
+    singularized_table_name_id, example: item_id
+-Las primary keys son:
+    id

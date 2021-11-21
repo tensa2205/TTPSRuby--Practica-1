@@ -1,0 +1,8 @@
+Investigá cómo se crea una aplicación Rails nueva y enumerá los pasos básicos para tener la
+aplicación funcionando con una base de datos SQLite.
+-Instalando la gema rails:
+gem install rails
+-Creando un nuevo proyecto rails
+rails new nombreCarpetaProyecto
+
+Por default, se configura sqlite3 como BD para nuestro nuevo proyecto rails.

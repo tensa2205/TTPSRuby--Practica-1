@@ -1,0 +1,4 @@
+¿Qué convención define AR para inferir los nombres de las tablas a partir de las clases Ruby?
+Citá ejemplos
+    Article --> articles
+    LineItem --> line_items

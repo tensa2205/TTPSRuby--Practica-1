@@ -1,0 +1,14 @@
+Creá el modelo Office para la tabla offices que creaste antes, e implementá en éste el mé‑
+todo de instancia to_s.
+Tip: también podés usar un generator para esto.
+class Office < ApplicationRecord
+    def to_s
+        self.name + self.phone_number
+    end
+end
+
+En la rails console
+
+Office.first.to_s
+
+GOD

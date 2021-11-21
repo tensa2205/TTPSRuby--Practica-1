@@ -1,0 +1,8 @@
+ActiveSupport
+¿De qué forma extiende AS las clases básicas de Ruby para incorporar nuevos métodos?
+
+AS básicamente es una gema que se encuentra partida en
+piezas pequeñas de forma que permite cargar las cosas que necesitemos
+realmente.
+
+require "active_support" por default no carga nada.

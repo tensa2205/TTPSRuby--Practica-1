@@ -1,0 +1,39 @@
+Sobre las migraciones de AR:
+1. ¿Qué son y para qué sirven?
+        Sirve para especificar las columnas y actualizaciones de nuestro
+        schema de la BD.
+2. ¿Cómo se generan?
+        bin/rails generate migration MigrationNameClass
+        Esto creará una migración vacia:
+            class MigrationNameClass < ActiveRecord::Migration[7.0]
+                def change
+                end
+            end
+
+3. ¿Dónde se guardan en el proyecto?
+        en db/migrate
+4. ¿Qué formato/organización tienen sus nombres de archivo? ¿Por qué considerás que es
+necesario respetar ese formato?
+        Tiene un formato tipo datetime de forma que quedan ordenados y rails sabe que migración correr.
+5. Generá una migración que cree la tabla offices con los siguientes atributos:
+• name: string de 255 caracteres, no puede ser nulo.
+• phone_number: string de 30 caracteres, no puede ser nulo y debe ser único.
+• address: text.
+• available: boolean, por defecto true, no puede ser nulo
+
+class CreateOffice < ActiveRecord::Migration[6.1]
+  def change
+    create_table :office do |t|
+      t.string :name, null: false, limit: 255
+      t.string :phone_number, null: false, index: {unique: true}, limit:30
+      t.text :address
+      t.boolean :available ,null: false, default: true
+
+      t.timestamps
+    end
+  end
+end
+
+rails db:migrate
+CREAR EL MODELO TAMBIÉN
+rails generate model ModelName --no-migration (se saltea la migración)

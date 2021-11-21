@@ -1,0 +1,13 @@
+¿Qué es un ambiente (environment) en una aplicación Rails? ¿Qué sentido considerás que tie‑
+ne usar diferentes ambientes en tu aplicación? ¿Cuál es el ambiente por defecto?
+
+Un ambiente es un modo de ejecutar una aplicación de Rails, es básicamente una configuración.
+Rails tiene 3 ambientes:
+-Producción --> aplicación que usan los clientes.
+-Desarrollo --> donde metemos funcionalidades nuevas.
+-Test --> donde podemos testear la app con distintas BD's.
+
+El ambiente por defecto es development.
+
+El sentido de esto es básicamente separar bién los concerns relacionados al deployment de la aplicación.
+No vamos a hacer el testing sobre lo que usan clientes.
