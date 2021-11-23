@@ -1,0 +1,16 @@
+Sobre scopes:
+1. ¿Qué son los scopes de AR? ¿Para qué los utilizarías?
+    Son querys agregadas en el modelo, nos sirven para ubicar querys que usemos seguido en varias partes del proyecto.
+    Mejorando el DRY.
+2. Investigá qué diferencia principal existe entre un método de clase y un scope, cuando se
+los utiliza para realizar la misma tarea.
+
+    Son literal lo mismo, pero la docu de rails especifica que si vas a recibir parámetros para la query, entonces go for
+    class methods. https://stackoverflow.com/questions/32930312/ruby-on-rails-activerecord-scopes-vs-class-methods
+3. Agregá los siguientes scopes al modelo Employee:
+• vacant: Filtra los empleados para quedarse únicamente con aquellos que no tengan
+una oficina asignada (o asociada).
+    scope :vacant, -> { where(office_id: null)}
+• occupied: Complemento del anterior, devuelve los empleados que sí tengan una ofi‑
+cina asignada.
+    scope :vacant, -> { where("office_id != null", true )}
